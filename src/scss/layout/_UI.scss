@@ -1,0 +1,38 @@
+body{
+    background-color: $negro;
+}
+
+.contenedor-estatica{
+
+    @include tablet{
+        height: 100vh;   //que el contenedor estetica tome toda la altura "viewport heigth"
+        @include grid(2, $separacion / 2);  //mixing
+    }
+   
+    .imagen{
+        height: 30rem;
+        background-image: url(../img/1.jpg);
+        // centrar la imahen en dispositivos pequeños
+        background-size: cover;
+        background-position: center center;
+
+        @include tablet{
+            height: auto;   
+        }
+    }
+}
+
+.app{
+    width: 95%; //Ancho de la pantalla del nav
+    margin: 0 auto; //Centrar el contenido
+    padding-top: $separacion / 2;
+
+    .seccion{
+        display: none; //Ocultarlos
+        margin-top: $separacion / 2;
+    }
+}
+
+.mostrar-seccion{
+    display: block !important;
+}

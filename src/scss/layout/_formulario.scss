@@ -1,0 +1,37 @@
+.formulario{
+    width: 100%;
+}
+.campo{
+    display: flex; 
+    align-items: center;  
+    margin-bottom: 2rem;
+   
+    
+    label{
+        flex: 0 0 10rem;  //Factor de crecimiento, 0  factor de crecimiento, 0 no crecera, 10rem medida
+        color: $blanco;
+    }
+    input{
+        flex: 1;         //Factor de crecimiento, toma el resto del espacion en los input
+        padding: $separacion / 4;
+        border-radius: 1rem;
+        border: none;
+    }
+
+    // Podemos elegir input por su tipo
+    // input[type="time"]{
+    //     background-color: $azul;
+    // }
+}
+
+.alerta{
+    padding: $separacion / 2;
+    text-align: center;
+    color: $blanco;
+    width: 100%;
+    display: block;
+
+    &.error{
+        background-color: rgb(194, 0, 0);
+    }
+}
